@@ -16,7 +16,7 @@ i love my bloody valentine
 ---
 # PROGRESS 
 ---
-- [ ] Just Starting
+- [x] Just Starting
 - [ ] Got some code in
 - [ ] Medium amount of code in
 - [ ] Okay almost done
