@@ -7,7 +7,7 @@ i love my bloody valentine
 - [x] 3 Songs and 1 SFX (Minium)
 - [x] 3 Images, minimum
 - [x] Concept art file
-- [ ] "app window" made (Without code just the window)
+- [~] "app window" made (Without code just the window)
 - [ ] Coded Music in
 - [ ] Coded SFXs in
 - [ ] Coded BGs 
@@ -17,7 +17,7 @@ i love my bloody valentine
 # PROGRESS 
 ---
 - [x] Just Starting
-- [ ] Got some code in
+- [x] Got some code in
 - [ ] Medium amount of code in
 - [ ] Okay almost done
 - [ ] Done!1
