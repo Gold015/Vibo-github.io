@@ -1,9 +1,19 @@
+// * DIVS: 2D rec
 fullScreen(); //displayWidth //displayHeight
 int appWidth = displayWidth;
 int appHeight = displayHeight;
+background(#794FAA);
+// ^ Background + App 
 //rect(x, y, width, height);
+/* 
+float LyricsX = appWidth * 2/2;
+float LyricsY = appHeight * 2/2;
+float LyricsWidth = appWidth * 0/0;
+float LyricsHeight = appHeight * 0/0;
+//
+rect(LyricsX, LyricsY, LyricsWidth, LyricsHeight);
+*/
 //Note: the debuggger expects rectangles to have float or double type variables
-//Using Ratios
 float imageX = appWidth * 1/4;
 float imageY = appHeight * 1/4;
 float imageWidth = appWidth * 1/2;
@@ -14,7 +24,6 @@ rect(imageX, imageY, imageWidth, imageHeight);
 float AlbumX = appWidth * 1.1/4.1;
 float AlbumY = appHeight * 1.1/3.9;
 float AlbumWidth = appWidth * 0.2/2;
-float AlbumHeight = appHeight * 0.2/2;
 //
 square(AlbumX, AlbumY, AlbumWidth);
 //
