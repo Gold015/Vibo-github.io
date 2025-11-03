@@ -7,10 +7,10 @@ i love my bloody valentine
 - [x] 3 Songs and 1 SFX (Minium)
 - [x] 3 Images, minimum
 - [x] Concept art file
-- [~] "app window" made (Without code just the window)
+  [sorta] "app window" made (Without code just the window)
 - [ ] Coded Music in
 - [ ] Coded SFXs in
-- [ ] Coded BGs 
+  [sorta] Coded BGs 
 - [ ] Lyrics added
 - [ ] finished Buttons
 ---
