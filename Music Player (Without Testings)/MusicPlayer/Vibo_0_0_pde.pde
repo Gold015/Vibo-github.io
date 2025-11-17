@@ -1,3 +1,4 @@
+
  // * DIVS: 2D rec
 fullScreen();
 int appWidth = displayWidth;
@@ -75,11 +76,3 @@ float FavoriteWidth = appWidth * 0.4/8.9;
 float FavoriteHeight = appHeight * 0.4/5.97;
 
 rect(FavoriteX, FavoriteY, FavoriteWidth, FavoriteHeight);
-/*
-PImage Album1 = loadImage("MyBloodyValentine.jpg");
-size(0,0);
-image(Album1, 0, 0);
-Album1.resize(20, 10);
-image(Album1, 0, 0);
-
-*/

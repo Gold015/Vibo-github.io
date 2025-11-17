@@ -1,39 +1,7 @@
-PImage bg;
-float x1 = 0;
-float x2;
-
-void setup() {
-  size(1000, 200);
-  bg = loadImage("maxresdefault.jpg"); // your image
-  x2 = bg.width;
-}
-
-void draw() {
-  background(0);
-  
-  // Move the images
-  x1 -= 2;
-  x2 -= 2;
-
-  // If an image goes off screen, reset its position
-  if (x1 < -bg.width) {
-    x1 = x2 + bg.width;
-  }
-  if (x2 < -bg.width) {
-    x2 = x1 + bg.width;
-  }
-
-  // Draw the images
-  image(bg, x1, 0);
-  image(bg, x2, 0);
-}
-
- 
  // * DIVS: 2D rec
-// fullScreen();
+fullScreen();
 int appWidth = displayWidth;
 int appHeight = displayHeight;
-// background(#2A0134);
 // ^ Background + App 
 //rect(x, y, width, height);
 /* 
@@ -45,6 +13,7 @@ float LyricsHeight = appHeight * 0/0;
 rect(LyricsX, LyricsY, LyricsWidth, LyricsHeight);
 */
 //Note: the debuggger expects rectangles to have float or double type variables
+
 float imageX = appWidth * 1/4;
 float imageY = appHeight * 1/4;
 float imageWidth = appWidth * 1/2;
@@ -86,31 +55,30 @@ float ForwardHeight = appHeight * 0.4/5.98;
 //
 rect(ForwardX, ForwardY, ForwardWidth, ForwardHeight);
 //
-float RepeatX = appWidth * 1.19/3;
-float RepeatY = appHeight * 2.40/5.4;
+float RepeatX = appWidth * 2.5/5;
+float RepeatY = appHeight * 4.15/5.4;
 float RepeatWidth = appWidth * 0.4/8.9;
 float RepeatHeight = appHeight * 0.4/5.97;
 //
 rect(RepeatX, RepeatY, RepeatWidth, RepeatHeight);
 
-float BackX = appWidth * 1.19/3;
-float BackY = appHeight * 2.40/4.53;
+float BackX = appWidth * 1.19/4;
+float BackY = appHeight * 3.48/4.53;
 float BackWidth = appWidth * 0.4/8.9;
 float BackHeight = appHeight * 0.4/5.97;
 //
 rect(BackX, BackY, BackWidth, BackHeight);
 //
 float FavoriteX = appWidth * 1.19/3;
-float FavoriteY = appHeight * 2.40/3.9;
+float FavoriteY = appHeight * 3/3.9;
 float FavoriteWidth = appWidth * 0.4/8.9;
 float FavoriteHeight = appHeight * 0.4/5.97;
 
 rect(FavoriteX, FavoriteY, FavoriteWidth, FavoriteHeight);
-/*
-PImage Album1 = loadImage("MyBloodyValentine.jpg");
-size(0,0);
-image(Album1, 0, 0);
-Album1.resize(20, 10);
-image(Album1, 0, 0);
-
-*/
+//
+float LyricBoxX = appWidth * 1/2.2;
+float LyricBoxY = appHeight * 1/4;
+float LyricBoxWidth = appWidth * 1/6;
+float LyricBoxHeight = appHeight * 1/2;
+//
+rect(LyricBoxX, LyricBoxY, LyricBoxWidth, LyricBoxHeight);
