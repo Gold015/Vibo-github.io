@@ -20,3 +20,8 @@ i love my bloody valentine
 - [x] Medium amount of code in
 - [ ] Okay almost done
 - [ ] Done!1
+-------
+# Other Info
+-------
+Duplicates of images from the Images Folder have appeared in the other ".pde"/processing applications due to the fact with the amount i have learned without the use of AI is that the images need to be in the same file/folder. 
+
