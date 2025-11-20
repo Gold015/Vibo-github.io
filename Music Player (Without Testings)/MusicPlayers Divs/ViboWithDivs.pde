@@ -1,7 +1,9 @@
+
  // * DIVS: 2D rec
 fullScreen();
 int appWidth = displayWidth;
 int appHeight = displayHeight;
+// background(#2A0134);
 // ^ Background + App 
 //rect(x, y, width, height);
 /* 
@@ -11,28 +13,30 @@ float LyricsWidth = appWidth * 0/0;
 float LyricsHeight = appHeight * 0/0;
 //
 rect(LyricsX, LyricsY, LyricsWidth, LyricsHeight);
-*/
-//Note: the debuggger expects rectangles to have float or double type variables
 
+//Note: the debuggger expects rectangles to have float or double type variables
 float imageX = appWidth * 1/4;
 float imageY = appHeight * 1/4;
 float imageWidth = appWidth * 1/2;
 float imageHeight = appHeight * 1/2;
-//
+/
 rect(imageX, imageY, imageWidth, imageHeight);
-//
-float AlbumX = appWidth * 1.1/4.1;
-float AlbumY = appHeight * 1.1/3.9;
-float AlbumWidth = appWidth * 0.2/2;
+*/
+float AlbumX = appWidth * 0.05/4.1;
+float AlbumY = appHeight * 0.1/3.9;
+float AlbumWidth = appWidth * 0.5/2;
 //
 square(AlbumX, AlbumY, AlbumWidth);
 //
-float ScrollX = appWidth * 1.1/4.1;
+float ScrollX = appWidth * 0.12/4.1;
 float ScrollY = appHeight * 1.85/3.9;
-float ScrollWidth = appWidth * 0.2/2;
+float ScrollWidth = appWidth * 0.4/2;
 float ScrollHeight = appHeight * 0.28/8;
 //
 rect(ScrollX, ScrollY, ScrollWidth, ScrollHeight); 
+//
+size(400, 400);
+rect(10, 800, 220, 220, 28);
 //
 float LyricsX = appWidth * 1.54/4;
 float LyricsY = appHeight * 1/4;
@@ -55,30 +59,23 @@ float ForwardHeight = appHeight * 0.4/5.98;
 //
 rect(ForwardX, ForwardY, ForwardWidth, ForwardHeight);
 //
-float RepeatX = appWidth * 2.5/5;
-float RepeatY = appHeight * 4.15/5.4;
+float RepeatX = appWidth * 1.19/3;
+float RepeatY = appHeight * 2.40/5.4;
 float RepeatWidth = appWidth * 0.4/8.9;
 float RepeatHeight = appHeight * 0.4/5.97;
 //
 rect(RepeatX, RepeatY, RepeatWidth, RepeatHeight);
 
-float BackX = appWidth * 1.19/4;
-float BackY = appHeight * 3.48/4.53;
+float BackX = appWidth * 1.19/3;
+float BackY = appHeight * 2.40/4.53;
 float BackWidth = appWidth * 0.4/8.9;
 float BackHeight = appHeight * 0.4/5.97;
 //
 rect(BackX, BackY, BackWidth, BackHeight);
 //
 float FavoriteX = appWidth * 1.19/3;
-float FavoriteY = appHeight * 3/3.9;
+float FavoriteY = appHeight * 2.40/3.9;
 float FavoriteWidth = appWidth * 0.4/8.9;
 float FavoriteHeight = appHeight * 0.4/5.97;
 
 rect(FavoriteX, FavoriteY, FavoriteWidth, FavoriteHeight);
-//
-float LyricBoxX = appWidth * 1/2.2;
-float LyricBoxY = appHeight * 1/4;
-float LyricBoxWidth = appWidth * 1/6;
-float LyricBoxHeight = appHeight * 1/2;
-//
-rect(LyricBoxX, LyricBoxY, LyricBoxWidth, LyricBoxHeight);
