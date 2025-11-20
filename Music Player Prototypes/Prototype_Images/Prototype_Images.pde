@@ -4,4 +4,7 @@
 //
 // Display
 fullScreen(); // Landscape
-size(); // portrait
+// size(500,500); // portrait
+int appWidth = displayWidth; //width
+int appHeight = displayHeight; // height
+println("Display VARS:", "appWidth:"+appWidth, appHeight, displayWidth, displayHeight, width, height);
