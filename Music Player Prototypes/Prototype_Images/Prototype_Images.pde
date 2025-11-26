@@ -3,10 +3,10 @@
 */
 //
 // Display
-fullScreen(); // Landscape
-size(500,500); // App portrait
-int appWidth = displayWidth; //width
-int appHeight = displayHeight; // height
+//llScreen(); // Landscape
+size(500,150);// App portrait
+int appWidth = width; //width
+int appHeight = height ;
 int imageWidth1 = 338;
 int imageHeight1 = 243;
 
@@ -35,7 +35,12 @@ rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 // A.R (aspect ratio)
 float imageWidthC1 = imageDivWidth;
 float imageHeightC = (imageWidth1 >= imageDivWidth ) ? imageWidthC1 / image1AspectRatio_GreaterOne  : imageWidthC1 * image1AspectRatio_GreaterOne; 
+//
+if (image2HeightChanged1 > imageDivHeight ) {
+  println("hey vro.. that image you got... doesnt fit twin... that fatal flaw of yours gotta be solved..");
 
+  exit();
+  //
 /*
 
 imageDivWidth
@@ -50,7 +55,7 @@ if () {} else {} // Aspect Ratio End
 
 
 
- image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for decimals, formula", imageWidth1/imageHeight1);
 // Decisions
