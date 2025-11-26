@@ -9,6 +9,7 @@ int appWidth = displayWidth; //width
 int appHeight = displayHeight; // height
 int imageWidth1 = 338;
 int imageHeight1 = 243;
+
 println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
 float imageDivX = appWidth*1.1/4;
@@ -49,11 +50,10 @@ if () {} else {} // Aspect Ratio End
 
 
 
-
-image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+ image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for decimals, formula", imageWidth1/imageHeight1);
 // Decisions
 // A.R (aspect ratio)
 // if () {} else {} // Aspect Ratio End
-// image(image1, imageDivX, imageDivY, imageWidthC, imageHeightC); // C means Changed/Change
+// image(image1, imageDivX, imageDivY, imageWidthC1, imageHeightC); // C means Changed/Change [error code]
