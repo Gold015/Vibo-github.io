@@ -32,7 +32,11 @@ rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 // image(image1, imageDivX, imageDivY, imageWidthC, imageHeightC); // C means Changed/Change
 // Decisions
 // A.R (aspect ratio)
+float imageWidthC1 = imageDivWidth;
+float imageHeightC = (imageWidth1 >= imageDivWidth ) ? imageWidthC1 / image1AspectRatio_GreaterOne  : imageWidthC1 * image1AspectRatio_GreaterOne; 
+
 /*
+
 imageDivWidth
 imageWidth1
 imageHeight1
@@ -46,8 +50,10 @@ if () {} else {} // Aspect Ratio End
 
 
 
-image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight); //
+image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+//
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for decimals, formula", imageWidth1/imageHeight1);
 // Decisions
 // A.R (aspect ratio)
 // if () {} else {} // Aspect Ratio End
+// image(image1, imageDivX, imageDivY, imageWidthC, imageHeightC); // C means Changed/Change
