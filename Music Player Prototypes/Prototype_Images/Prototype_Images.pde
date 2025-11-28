@@ -4,7 +4,7 @@
 //
 // Display
 //llScreen(); // Landscape
-size(500,150);// App portrait
+size(500,400);// App portrait
 int appWidth = width; //width
 int appHeight = height ;
 int imageWidth1 = 338;
@@ -46,9 +46,21 @@ if (imageHeightC1 > imageDivHeight ) {
   println("hey vro.. that image you got... doesnt fit twin... that fatal flaw of yours gotta be solved..");
 
  // exit();
-  while (imageHeightC1>imageDivHeight) {
-  imageWidthC1 *= 0.99;
-  imageHeightC1 = imageWidthC1/image1AspectRatio_GreaterOne;
+ int indexWhile = 0;
+ //** "While loops" can run infinitely with a error if not controlled
+  while (imageHeightC1>imageDivHeight) 
+    println("Iteration of percent WHILE loop", indexWhile++); // Prints value then counts how much it printed
+imageWidthC1 *= 0.99;
+imageHeightC1 = imageWidthC1/image1AspectRatio_GreaterOne;
+}
+
+imageWidthC1 *= 0.98;
+imageHeightC1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
+  if (indexWhile < 100000 ) {
+  } else {
+    println("hey man, this isnt portal, get outta that infinite loop, value:", indexWhile); // Image Percent WHILE value
+    exit();
+    imageHeightC1=imageDivHeight; // makes "WHILE" False, Stops while loop
   }
 }
 /*
