@@ -9,12 +9,12 @@ int Killdroid = int(900 / random(1, 1990));
 
 if (Badware > Killdroid) {
   println("dandelion");
-
-  if (Killdroid > Badware) {  // no stray semicolon!
-    println("[DUDE LEAVE]");
-  }
 }
 
+if (Killdroid > Badware) {
+  println("[DUDE LEAVE]");
+}
+//okay its done now ^
 //fullScreen(); // Canvas
 size(500,400);// Painting
 int appWidth = width; // width
