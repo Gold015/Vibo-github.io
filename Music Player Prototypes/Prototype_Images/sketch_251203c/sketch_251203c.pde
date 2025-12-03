@@ -1,19 +1,3 @@
-/* Aspect Ratio: "Bike only demostration" without the Bike
-- ''My Bloody Valentine2''
-*/
-//
-// Display
-// Code done for practice down here (please ignore beacuse this doesn't help the other code by any means)
-int Badware = int(1990 / random(1, 1990));
-int Killdroid = int(900 / random(1, 1990));
-if (Badware > Killdroid) {
-  println("dandelion");
-}
-if (Killdroid > Badware) {
-  println("[DUDE LEAVE]");
-}
-//okay its done now ^
-
 //fullScreen(); // Canvas
 size(500,400);// Painting changing this allows the Counting attempts code to activate :O)
 int appWidth = width; // width
@@ -34,7 +18,7 @@ String imageExPNG = ".png";
 String imagePathway1 = upArrow + Location + IMGtest + imageExPNG; 
 println("DevistoTest Pathway:", imagePathway1);
 // div & Image Loading (with aspect ratio)
-float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator" //<>//
+float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator"
 //ERROR: truncating, casting
 println(image1AspectRatio_GreaterOne);
 PImage errorImage = loadImage("BetterBadwareErrorImage.png"); // Error message ha
