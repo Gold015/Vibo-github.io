@@ -27,11 +27,11 @@ float imageDivY = appHeight*1/9;
 float imageDivWidth = appWidth*1/1.9;
 float imageDivHeight = appHeight*3/4;
 // Image Aspect Ratio Vars & Algorithm. Directory or Pathway, Concatienation
-String upArrow = "../../";
+String Pathway = "../../";
 String Location = "Lesson Image (Lesson depend)/Images/"; //** blhah
 String IMGtest = "DevistoTest";
 String imageExPNG = ".png";
-String imagePathway1 = upArrow + Location + IMGtest + imageExPNG; 
+String imagePathway1 = Pathway + Location + IMGtest + imageExPNG; 
 println("DevistoTest Pathway:", imagePathway1);
 // div & Image Loading (with aspect ratio)
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator" //<>//
