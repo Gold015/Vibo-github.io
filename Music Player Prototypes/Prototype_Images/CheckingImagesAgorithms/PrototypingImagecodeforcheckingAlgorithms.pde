@@ -11,13 +11,32 @@ float imageDivY = appHeight*1/9;
 float imageDivWidth = appWidth*1/1.9;
 float imageDivHeight = appHeight*3/4;
 // Image Aspect Ratio Vars & Algorithm. Directory or Pathway, Concatienation
-String upArrow = "../../";
-String Location = "Lesson Image (Lesson depend)/Images/"; //** blhah
+String Pathway = "../../../";
+String MainFolder = "Lesson Image (Lesson depend)/Images/"; //** blhah
 String IMGtest = "DevistoTest";
 String imageExPNG = ".png";
-String imagePathway1 = upArrow + Location + IMGtest + imageExPNG; 
+String imagePathway1 = Pathway + MainFolder + IMGtest + imageExPNG; 
 println("DevistoTest Pathway:", imagePathway1);
+int images = 2;
+int D = 0; // "Devisto"image
+// D = 0 is Devisto 
+// D = 1 is "BadwareErrorImg"
+String[] NameF = new String[images];
+String[] fileEx = new String[images];
+fileEx[0] = ".png";
+fileEx[1] = ".png";
+String[] imagepathway1 = new String[images];
+imagepathway1[D] = Pathway + MainFolder + NameF[D] + fileEx[D];
 // div & Image Loading (with aspect ratio)
+int image = 1;
+PImage[] Image = new PImage[images];
+image[D] = loadImage(MainFolder[D]);
+PImage BadWareErrorImage = loadImage ("BetterBadwareErrorImage.png");
+if (image[D] == null) {
+  println("TestForNowLine");
+  image[D] = BadWareErrorImage;
+  exit(); 
+}
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator"
 //ERROR: truncating, casting
 println(image1AspectRatio_GreaterOne);
@@ -28,6 +47,12 @@ if (image1 == null) {
   image1 = errorImage;
   exit();
 }
+int[] imageWidth = new int[images];
+int[] imageHeight = new int[images];
+imageWidth[0] = 500;
+imageHeight[0] = 280;
+imageWidth[1] = 1000;
+imageHeight[1] = 1500;
 //Okay Error Msg code is over
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
