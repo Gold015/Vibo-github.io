@@ -15,7 +15,7 @@ String Pathway = "../../../";
 String MainFolder = "Lesson Image (Lesson depend)/Images/"; //** blhah
 String IMGtest = "DevistoTest";
 String imageExPNG = ".png";
-String imagePathway1 = Pathway + MainFolder + IMGtest + imageExPNG; 
+String imagePathway1 = Pathway + MainFolder+ IMGtest + imageExPNG; 
 println("DevistoTest Pathway:", imagePathway1);
 int images = 2;
 int D = 0; // "Devisto"image
@@ -30,11 +30,11 @@ imagepathway1[D] = Pathway + MainFolder + NameF[D] + fileEx[D];
 // div & Image Loading (with aspect ratio)
 int image = 1;
 PImage[] Image = new PImage[images];
-image[D] = loadImage(MainFolder[D]);
+image[D] = loadImage(MainFolder[D]); // Err
 PImage BadWareErrorImage = loadImage ("BetterBadwareErrorImage.png");
-if (image[D] == null) {
+if (image[D] == null) { //err
   println("TestForNowLine");
-  image[D] = BadWareErrorImage;
+  image[D] = BadWareErrorImage; // err
   exit(); 
 }
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator"
