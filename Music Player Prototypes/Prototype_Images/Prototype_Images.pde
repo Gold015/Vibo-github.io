@@ -10,7 +10,7 @@ if (Badware > Killdroid) {
   println("dandelion");
 }
 if (Killdroid > Badware) {
-  println("[DUDE LEAVE]");
+  println("[WHAT]");
 }
 //okay its done now ^
 
