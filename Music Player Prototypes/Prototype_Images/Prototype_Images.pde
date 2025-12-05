@@ -28,7 +28,7 @@ float imageDivWidth = appWidth*1/1.9;
 float imageDivHeight = appHeight*3/4;
 // Image Aspect Ratio Vars & Algorithm. Directory or Pathway, Concatienation
 String Pathway = "../../";
-String Location = "Lesson Image (Lesson depend)/Images/"; //** blhah
+String Location = "Lesson Image (Lesson depend)/Images/"; //** Ehhhhhhhhhhhhhh  
 String IMGtest = "DevistoTest";
 String imageExPNG = ".png";
 String imagePathway1 = Pathway + Location + IMGtest + imageExPNG; 
@@ -81,7 +81,7 @@ if () {} else {} // Aspect Ratio End
 */
 image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
-println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for decimals, formula", imageWidth1/imageHeight1);
+println("Aspect Ratio is greater than one :P", image1AspectRatio_GreaterOne, "Testing for Decimals", imageWidth1/imageHeight1);
 // Decisions
 // A.R (aspect ratio)
 // if () {} else {} // Aspect Ratio End
