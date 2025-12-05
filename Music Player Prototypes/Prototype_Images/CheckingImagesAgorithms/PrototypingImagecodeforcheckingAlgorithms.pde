@@ -1,3 +1,4 @@
+
 //fullScreen(); // Canvas
 size(500,400);// Painting changing this allows the Counting attempts code to activate :O)
 int appWidth = width; // width
@@ -29,6 +30,7 @@ String[] imagepathway1 = new String[images];
 imagepathway1[D] = Pathway + MainFolder + NameF[D] + fileEx[D];
 // div & Image Loading (with aspect ratio)
 int image = 1;
+array(image);
 PImage[] Image = new PImage[images];
 image[D] = loadImage(MainFolder[D]); // Err
 PImage BadWareErrorImage = loadImage ("BetterBadwareErrorImage.png");
