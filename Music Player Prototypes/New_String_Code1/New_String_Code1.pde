@@ -12,11 +12,15 @@ float txtDivWidth = appWidth*1/1.9;
 float txtDivHeight = appHeight*0.8/11;
 rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
 String title = "Lyrics";
-println("Starting console..");
+/*println("Starting console..");
 String[] fontList = PFont.list();
 printArray(fontList); 
-int fontSize = 11;
+*/
+float FSize = 11;
 PFont titlefont; //Variable
-String blah = "blah";
-titleFont = createFont (FontThingy, ); // Custom Font i made-ish
+String gothic = "Yu Gothic UI Semibold";
+titlefont = createFont (gothic, FSize ); // Custom Font i made-ish
+//Tools / Create Font / Find Font / Do not press Ok
+println(FSize, gothic);
+fill(0);
 text("Song Playing: When you sleep", txtDivX, txtDivY, txtDivWidth, txtDivHeight);
