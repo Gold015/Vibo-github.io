@@ -12,4 +12,11 @@ float txtDivWidth = appWidth*1/1.9;
 float txtDivHeight = appHeight*0.8/11;
 rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
 String title = "Lyrics";
+println("Starting console..");
+String[] fontList = PFont.list();
+printArray(fontList); 
+int fontSize = 11;
+PFont titlefont; //Variable
+String blah = "blah";
+titleFont = createFont (FontThingy, ); // Custom Font i made-ish
 text("Song Playing: When you sleep", txtDivX, txtDivY, txtDivWidth, txtDivHeight);
