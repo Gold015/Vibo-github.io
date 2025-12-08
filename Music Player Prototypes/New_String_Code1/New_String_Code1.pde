@@ -16,11 +16,13 @@ String title = "Lyrics";
 String[] fontList = PFont.list();
 printArray(fontList); 
 */
-float FSize = 11;
-PFont titlefont; //Variable
+float FSize = 60; 
+PFont TFont; //Variable (Text Font)
 String gothic = "Yu Gothic UI Semibold";
-titlefont = createFont (gothic, FSize ); // Custom Font i made-ish
+TFont = createFont (gothic, FSize ); // Custom Font i made-ish
 //Tools / Create Font / Find Font / Do not press Ok
 println(FSize, gothic);
-fill(0);
+color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
+fill(darkpurpleInk); // ink bloop blloopp
+textFont(TFont, FSize);
 text("Song Playing: When you sleep", txtDivX, txtDivY, txtDivWidth, txtDivHeight);
