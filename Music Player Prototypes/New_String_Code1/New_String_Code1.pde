@@ -1,28 +1,67 @@
 // String
+background(#811331);
 fullScreen(); // Canvas
-size(500,400);// for testing smaller things 
+size(500, 400);// for testing smaller things
 int appWidth = width; // width
 int appHeight = height ;
 // println("DisplayVariables:", "appWidth:", "appHeight", "appHeight+"appHeight"
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
+float[] SDivWidth = new float[2];
 float txtDivX = appWidth*1.1/4;
 float txtDivY = appHeight*1/9;
-float txtDivWidth = appWidth*1/1.9;
+txtDivWidth[0] = appWidth*1/1.9;
 float txtDivHeight = appHeight*0.8/11;
+float txtDiv2X = appWidth * 1.2;
+float txtDiv2Y = appHeight * 2.4;
+txtDiv2Width[1] = appWidth * 2;
+float txtDiv2Height = appHeight * 2;
+float txtDiv3X = appWidth * 1/3;
+float txtDiv3Y = appHeight * 4/2;
+txtDiv3Width[2] = appWidth * 3/4;
+float txtDiv3Height = appHeight * 2/2;
 rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
-String title = "Lyrics";
+String title = "MY BLOODY VALENTINE";
 /*println("Starting console..");
-String[] fontList = PFont.list();
-printArray(fontList); 
-*/
-float FSize = 60; 
+ String[] fontList = PFont.list();
+ printArray(fontList);
+ */
 PFont TFont; //Variable (Text Font)
-String gothic = "Yu Gothic UI Semibold";
-TFont = createFont (gothic, FSize ); // Custom Font i made-ish
-//Tools / Create Font / Find Font / Do not press Ok
-println(FSize, gothic);
-color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
-fill(darkpurpleInk); // ink bloop blloopp
+String fontName = "FontT";
+float FSize = appHeight;
+float FSizegothic;
+float Decreasing = 0.99; //
 textFont(TFont, FSize);
-text("Song Playing: When you sleep", txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+textFont(TFont, Decreasing);
+for ( i=1; i<=3; i++) {
+while ( textWidth( title )  > txtDivWidth ) {
+  FSize *= Decreasing;
+  textFont(TFont, FSize);
+  textFont (TFont, FSize);
+  } 
+}//End loop urh
+String gothic = "Yu Gothic UI Semibold";
+ TFont = createFont (gothic, FSize  ); // Custom Font i made-ish
+  //Tools / Create Font / Find Font / Do not press Ok
+  println(FSize, gothic, TFont, "hi :D");
+  FSizegothic = 49; // 60.2 is the biggest it can get before it vanishes
+  textAlign (BASELINE, TOP);
+  color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
+  fill(darkpurpleInk); // ink bloop blloopp
+  textFont(TFont, FSize);
+  text(title, txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+  // Case studies TXT
+  /*
+println("DevistoTest Pathway:", "imagePathway1");
+   println("image1AspectRatio_GreaterOne");
+   println("Null is in your minecraft world!!11 OOoOOoo!1! (NullPointerException Error)");
+   println("this is a image coding software not portal. Exiting"); //Image Loop Value IMG error
+   println("How many attempts it takes till it fits:");
+   println("This image needs to FIT and it DOESNT");
+   */
+  // ASPECT RATIO
+  float gothicAspectRatio = FSizegothic / txtDivHeight;
+  FSize = txtDivHeight*gothicAspectRatio;
+  println(gothicAspectRatio);
+  rect(txtDiv2X, txtDiv2Y, txtDiv2Width, txtDiv2Height);
+  rect(txtDiv3X, txtDiv3Y, txtDiv3Width, txtDiv3Height);
