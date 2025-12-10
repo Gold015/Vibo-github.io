@@ -33,7 +33,7 @@ float FSizegothic;
 float Decreasing = 0.99; //
 textFont(TFont, FSize);
 textFont(TFont, Decreasing);
-for ( i=1; i<=3; i++) {
+for ( i=0; i<3; i++) {
 while ( textWidth( title )  > txtDivWidth ) {
   FSize *= Decreasing;
   textFont(TFont, FSize);
