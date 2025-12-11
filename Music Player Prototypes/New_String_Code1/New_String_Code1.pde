@@ -7,25 +7,25 @@ int appHeight = height ;
 // println("DisplayVariables:", "appWidth:", "appHeight", "appHeight+"appHeight"
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
-float[] SDivWidth = new float[2];
-float txtDivX = appWidth*1.1/4;
-float txtDivY = appHeight*1/9;
+float[] SDivWidth[0] = new float[2];
+float txtDivX[0] = appWidth*1.1/4;
+float txtDivY[0] = appHeight*1/9;
 txtDivWidth[0] = appWidth*1/1.9;
-float txtDivHeight = appHeight*0.8/11;
-float txtDiv2X = appWidth * 1.2;
-float txtDiv2Y = appHeight * 2.4;
+float txtDivHeight[1] = appHeight*0.8/11;
+float txtDiv2X[1] = appWidth * 1.2;
+float txtDiv2Y[1] = appHeight * 2.4;
 txtDiv2Width[1] = appWidth * 2;
-float txtDiv2Height = appHeight * 2;
-float txtDiv3X = appWidth * 1/3;
-float txtDiv3Y = appHeight * 4/2;
+float txtDiv2Height[1] = appHeight * 2;
+float txtDiv3X[2] = appWidth * 1/3;
+float txtDiv3Y[2] = appHeight * 4/2;
 txtDiv3Width[2] = appWidth * 3/4;
-float txtDiv3Height = appHeight * 2/2;
+float txtDiv3Height[2] = appHeight * 2/2;
 rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
 String title = "MY BLOODY VALENTINE";
-/*println("Starting console..");
+println("Starting console..");
  String[] fontList = PFont.list();
  printArray(fontList);
- */
+
 PFont TFont; //Variable (Text Font)
 String fontName = "FontT";
 float FSize = appHeight;
