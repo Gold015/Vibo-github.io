@@ -7,33 +7,47 @@ int appHeight = height ;
 // println("DisplayVariables:", "appWidth:", "appHeight", "appHeight+"appHeight"
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
-float[] SDivWidth[0] = new float[2];
-float txtDivX[0] = appWidth*1.1/4;
-float txtDivY[0] = appHeight*1/9;
-txtDivWidth[0] = appWidth*1/1.9;
-float txtDivHeight[1] = appHeight*0.8/11;
-float txtDiv2X[1] = appWidth * 1.2;
-float txtDiv2Y[1] = appHeight * 2.4;
-txtDiv2Width[1] = appWidth * 2;
-float txtDiv2Height[1] = appHeight * 2;
-float txtDiv3X[2] = appWidth * 1/3;
-float txtDiv3Y[2] = appHeight * 4/2;
-txtDiv3Width[2] = appWidth * 3/4;
-float txtDiv3Height[2] = appHeight * 2/2;
+float[] SDivWidth = new float[2];
+float txtDivX = appWidth*1.1/4;
+float txtDivY  = appHeight*1/9;
+float txtDivWidth = appWidth*1/1.9;
+float txtDivHeight = appHeight*0.8/11;
+float txtDiv2X = appWidth * 1.2;
+float txtDiv2Y = appHeight * 2.4;
+float txtDiv2Width = appWidth * 2;
+float txtDiv2Height = appHeight * 2;
+float txtDiv3X = appWidth * 1/3;
+float txtDiv3Y = appHeight * 4/2;
+float txtDiv3Width = appWidth * 3/4;
+float txtDiv3Height = appHeight * 2/2;
 rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
-String title = "MY BLOODY VALENTINE";
+String title = "SONG PLAYING: WHEN YOU SLEEP";
+String TXT0 = "UP NEXT";
+String TXT1 = "LIKE BUTTON";
+String TXT2 = "LYRICS";
+String TXT3 = "ARTIST";
 println("Starting console..");
  String[] fontList = PFont.list();
  printArray(fontList);
-
+//
+int Divisor = 50;
+int[] TestTheSize = new int[3];
+TestTheSize[1] = 100;
+TestTheSize[2] = 150;
+TestTheSize[3] = 200;
+for (int i=0, i<2; i++){
+  Aspectratio(i) = float(TestTheSize[1]) / float(Divisor);
+  FSize[i] 
+//
 PFont TFont; //Variable (Text Font)
-String fontName = "FontT";
+String fontName = "TFont";
 float FSize = appHeight;
 float FSizegothic;
 float Decreasing = 0.99; //
+TFont = createFont(fontName, FSize);
 textFont(TFont, FSize);
 textFont(TFont, Decreasing);
-for ( i=0; i<3; i++) {
+for (int i=0; i<2; i++) {
 while ( textWidth( title )  > txtDivWidth ) {
   FSize *= Decreasing;
   textFont(TFont, FSize);
@@ -48,11 +62,13 @@ String gothic = "Yu Gothic UI Semibold";
   textAlign (BASELINE, TOP);
   color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
   fill(darkpurpleInk); // ink bloop blloopp
+  color GrayInk = #DBD9D9;
+  color RedoInk = GrayInk;
   textFont(TFont, FSize);
   text(title, txtDivX, txtDivY, txtDivWidth, txtDivHeight);
   // Case studies TXT
   /*
-println("DevistoTest Pathway:", "imagePathway1");
+   println("DevistoTest Pathway:", "imagePathway1");
    println("image1AspectRatio_GreaterOne");
    println("Null is in your minecraft world!!11 OOoOOoo!1! (NullPointerException Error)");
    println("this is a image coding software not portal. Exiting"); //Image Loop Value IMG error
@@ -60,8 +76,8 @@ println("DevistoTest Pathway:", "imagePathway1");
    println("This image needs to FIT and it DOESNT");
    */
   // ASPECT RATIO
-  float gothicAspectRatio = FSizegothic / txtDivHeight;
-  FSize = txtDivHeight*gothicAspectRatio;
-  println(gothicAspectRatio);
-  rect(txtDiv2X, txtDiv2Y, txtDiv2Width, txtDiv2Height);
-  rect(txtDiv3X, txtDiv3Y, txtDiv3Width, txtDiv3Height);
+float gothicAspectRatio = FSizegothic / txtDivHeight;
+FSize = txtDivHeight*gothicAspectRatio;
+println(gothicAspectRatio);
+rect(txtDiv2X, txtDiv2Y, txtDiv2Width, txtDiv2Height);
+rect(txtDiv3X, txtDiv3Y, txtDiv3Width, txtDiv3Height);
