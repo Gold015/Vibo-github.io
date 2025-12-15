@@ -1,10 +1,15 @@
+/* Aspect Ratio: "Bike only demostration" without the Bike
+- ''My Bloody Valentine2''
+*/
+//
+// Display
 
 //fullScreen(); // Canvas
-size(500,400);// Painting changing this allows the Counting attempts code to activate :O)
+size(500,0);// Painting changing this allows the Counting attempts code to activate :O)
 int appWidth = width; // width
 int appHeight = height ;
 int imageWidth1 = 338;
-int imageHeight1 = 243;
+int imageHeight1 = 3000;
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
 float imageDivX = appWidth*1.1/4;
@@ -13,34 +18,22 @@ float imageDivWidth = appWidth*1/1.9;
 float imageDivHeight = appHeight*3/4;
 // Image Aspect Ratio Vars & Algorithm. Directory or Pathway, Concatienation
 String Pathway = "../../../";
-String MainFolder = "Lesson Image (Lesson depend)/Images/"; //** blhah
+String Location = "Lesson Image (Lesson depend)/Images/"; //** Ehhhhhhhhhhhhhh  
 String IMGtest = "DevistoTest";
 String imageExPNG = ".png";
-String imagePathway1 = Pathway + MainFolder+ IMGtest + imageExPNG; 
+String imagePathway1 = Pathway + Location + IMGtest + imageExPNG; 
 println("DevistoTest Pathway:", imagePathway1);
-int images = 2;
-int D = 0; // "Devisto"image
-// D = 0 is Devisto 
-// D = 1 is "BadwareErrorImg"
-String[] NameF = new String[images];
-String[] fileEx = new String[images];
-fileEx[0] = ".png";
-fileEx[1] = ".png";
-String[] imagepathway1 = new String[images];
-imagepathway1[D] = Pathway + MainFolder + NameF[D] + fileEx[D];
 // div & Image Loading (with aspect ratio)
-int image = 1;
-array(image);
-PImage[] Image = new PImage[images];
-image[D] = loadImage(MainFolder[D]); // Err
-PImage BadWareErrorImage = loadImage ("BetterBadwareErrorImage.png");
-if (image[D] == null) { //err
-  println("TestForNowLine");
-  image[D] = BadWareErrorImage; // err
-  exit(); 
-}
-float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator"
+float image1AspectRatio_GreaterOne = ( imageWidth1 <= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageWidth1)/float(imageHeight1) ; // "Ternary Operator"
 //ERROR: truncating, casting
+println(image1AspectRatio_GreaterOne);
+String Pathway1 = "../../../../";
+String Location1 = "Lesson Image (Lesson depend)/Images/";
+String ErrImg = "BetterBadwareErrorImage";
+String ErrImgPng = ".png";
+String Pathway2 = Pathway1 + Location1 + ErrImg + ErrImgPng;
+float image1AspectRatio_LessThanOne = (imageWidth1 >= imageHeight1) ? float(imageHeight1)/float(imageWidth1) : float(imageWidth1)/float(imageHeight1) ;
+println("Badware Error Image Pathway:", Pathway2);
 println(image1AspectRatio_GreaterOne);
 PImage errorImage = loadImage("BetterBadwareErrorImage.png"); // Error message ha
 PImage image1 = loadImage(imagePathway1);  
@@ -49,12 +42,6 @@ if (image1 == null) {
   image1 = errorImage;
   exit();
 }
-int[] imageWidth = new int[images];
-int[] imageHeight = new int[images];
-imageWidth[0] = 500;
-imageHeight[0] = 280;
-imageWidth[1] = 1000;
-imageHeight[1] = 1500;
 //Okay Error Msg code is over
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
@@ -92,7 +79,7 @@ if () {} else {} // Aspect Ratio End
 */
 image(image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
-println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for decimals, formula", imageWidth1/imageHeight1);
+println("Aspect Ratio is greater than one :P", image1AspectRatio_GreaterOne, "Testing for Decimals", imageWidth1/imageHeight1);
 // Decisions
 // A.R (aspect ratio)
 // if () {} else {} // Aspect Ratio End

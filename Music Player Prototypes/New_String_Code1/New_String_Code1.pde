@@ -30,32 +30,41 @@ println("Starting console..");
  String[] fontList = PFont.list();
  printArray(fontList);
 //
-int Divisor = 50;
-int[] TestTheSize = new int[3];
-TestTheSize[1] = 100;
-TestTheSize[2] = 150;
-TestTheSize[3] = 200;
-for (int i=0, i<2; i++){
-  Aspectratio(i) = float(TestTheSize[1]) / float(Divisor);
-  FSize[i] 
-//
 PFont TFont; //Variable (Text Font)
 String fontName = "TFont";
-float FSize = appHeight;
+float FSize0 = appHeight;
 float FSizegothic;
 float Decreasing = 0.99; //
-TFont = createFont(fontName, FSize);
-textFont(TFont, FSize);
+TFont = createFont(fontName, FSize0);
+textFont(TFont, FSize0);
 textFont(TFont, Decreasing);
 for (int i=0; i<2; i++) {
 while ( textWidth( title )  > txtDivWidth ) {
-  FSize *= Decreasing;
-  textFont(TFont, FSize);
-  textFont (TFont, FSize);
+  FSize0 *= Decreasing;
+  textFont(TFont, FSize0);
+  textFont (TFont, FSize0);
   } 
 }//End loop urh
+int Divisor = 50;
+
+// Fix array size
+int[] TestTheSize = new int[4];
+TestTheSize[1] = 100;
+TestTheSize[2] = 150;
+TestTheSize[3] = 200;
+
+// Declare arrays
+float[] Aspectratio = new float[2];
+float[] FSize = new float[2];
+
+for (int i = 0; i < 2; i++) {
+  Aspectratio[i] = float(TestTheSize[i + 1]) / float(Divisor);
+  FSize[i] = Aspectratio[i];
+}
+
+//
 String gothic = "Yu Gothic UI Semibold";
- TFont = createFont (gothic, FSize  ); // Custom Font i made-ish
+ TFont = createFont (gothic, FSize0 ); // Custom Font i made-ish
   //Tools / Create Font / Find Font / Do not press Ok
   println(FSize, gothic, TFont, "hi :D");
   FSizegothic = 49; // 60.2 is the biggest it can get before it vanishes
@@ -64,7 +73,7 @@ String gothic = "Yu Gothic UI Semibold";
   fill(darkpurpleInk); // ink bloop blloopp
   color GrayInk = #DBD9D9;
   color RedoInk = GrayInk;
-  textFont(TFont, FSize);
+  textFont(TFont, FSize0);
   text(title, txtDivX, txtDivY, txtDivWidth, txtDivHeight);
   // Case studies TXT
   /*
@@ -77,7 +86,7 @@ String gothic = "Yu Gothic UI Semibold";
    */
   // ASPECT RATIO
 float gothicAspectRatio = FSizegothic / txtDivHeight;
-FSize = txtDivHeight*gothicAspectRatio;
+FSize0 = txtDivHeight*gothicAspectRatio;
 println(gothicAspectRatio);
 rect(txtDiv2X, txtDiv2Y, txtDiv2Width, txtDiv2Height);
 rect(txtDiv3X, txtDiv3Y, txtDiv3Width, txtDiv3Height);
