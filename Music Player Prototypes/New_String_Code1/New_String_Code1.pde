@@ -7,60 +7,51 @@ int appHeight = height ;
 // println("DisplayVariables:", "appWidth:", "appHeight", "appHeight+"appHeight"
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullscreendisplayWidth:"+displayWidth, "displayHeight:"+displayHeight, "width:"+width, "height:"+height);
 // Population/More floats
-float[] SDivWidth = new float[2];
-float txtDivX = appWidth*1.1/4;
-float txtDivY  = appHeight*1/9;
-float txtDivWidth = appWidth*1/1.9;
-float txtDivHeight = appHeight*0.8/11;
-float txtDiv2X = appWidth * 1.2;
-float txtDiv2Y = appHeight * 2.4;
-float txtDiv2Width = appWidth * 2;
-float txtDiv2Height = appHeight * 2;
-float txtDiv3X = appWidth * 1/3;
-float txtDiv3Y = appHeight * 4/2;
-float txtDiv3Width = appWidth * 3/4;
-float txtDiv3Height = appHeight * 2/2;
-rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+int NumOfDIVS = 3;
+float[] txtDivHeight = new float[NumOfDIVS];
+float[] txtDivX = new float[NumOfDIVS];
+float[] txtDivY  = new float[NumOfDIVS];
+float[] txtDivWidth = new float [NumOfDIVS];
+// txtDivHeight[0] = appHeight*2/11;
+txtDivX[0] = appWidth * 1.2;
+txtDivY[0] = appHeight * 2.4;
+txtDivWidth[0] = appWidth * 2;
+txtDivHeight[0] = appHeight * 2;
+txtDivX[1] = appWidth * 1/3;
+txtDivY[1] = appHeight * 4/2;
+txtDivWidth[1] = appWidth * 3/4;
+txtDivHeight[1] = appHeight * 2/2;
+//rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+String[] TXT = new String[NumOfDIVS];
 String title = "SONG PLAYING: WHEN YOU SLEEP";
-String TXT0 = "UP NEXT";
-String TXT1 = "LIKE BUTTON";
-String TXT2 = "LYRICS";
-String TXT3 = "ARTIST";
+TXT[0] = "ARTIST";
+TXT[1] = "UP NEXT";
+TXT[2] = "ADD";
 println("Starting console..");
  String[] fontList = PFont.list();
- printArray(fontList);
+
+float[] fontSize = new float[NumOfDIVS];
+String[] font = new String[NumOfDIVS];
+font[0] = "gothic";
+font[1] = "InkFree";
+font[2] = "TimesNewRoman";
+PFont[] drawFont = new PFont[NumOfDIVS];
 //
-PFont TFont; //Variable (Text Font)
-String fontName = "TFont";
-float FSize0 = appHeight;
-float FSizegothic;
-float Decreasing = 0.99; //
-TFont = createFont(fontName, FSize0);
-textFont(TFont, FSize0);
-textFont(TFont, Decreasing);
-for (int i=0; i<2; i++) {
-while ( textWidth( title )  > txtDivWidth ) {
-  FSize0 *= Decreasing;
-  textFont(TFont, FSize0);
-  textFont (TFont, FSize0);
-  } 
-}//End loop urh
-int Divisor = 50;
+float[] AspectRatioyay = new float[NumOfDIVS];
 
+int divider = 50;
 // Fix array size
-int[] TestTheSize = new int[4];
-TestTheSize[1] = 100;
-TestTheSize[2] = 150;
-TestTheSize[3] = 200;
-
+int[] TestTheSize = new int[NumOfDIVS];
+TestTheSize[0] = 100;
+TestTheSize[1] = 150;
+TestTheSize[2] = 200;
+for (int A=0; B<NumOfDIVS; C++) {
+  rect(txtDivX[A], txtDivY[A], txtDivWidth[A], txtDivHeight[A]);
+}
 // Declare arrays
 float[] Aspectratio = new float[2];
 float[] FSize = new float[2];
 
-for (int i = 0; i < 2; i++) {
-  Aspectratio[i] = float(TestTheSize[i + 1]) / float(Divisor);
-  FSize[i] = Aspectratio[i];
-}
 
 //
 String gothic = "Yu Gothic UI Semibold";
