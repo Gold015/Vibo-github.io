@@ -45,8 +45,12 @@ int[] TestTheSize = new int[NumOfDIVS];
 TestTheSize[0] = 100;
 TestTheSize[1] = 150;
 TestTheSize[2] = 200;
-for (int A=0; B<NumOfDIVS; C++) {
+for (int A=0; A<NumOfDIVS; A++) {
   rect(txtDivX[A], txtDivY[A], txtDivWidth[A], txtDivHeight[A]);
+}
+//
+for ( int A=0; A<NumOfDIVS; A++) {
+  rect( txtDivX[A], txtDivY[A], txtDivWidth[A], txtDivHeight[A]);
 }
 // Declare arrays
 float[] Aspectratio = new float[2];
@@ -64,8 +68,38 @@ String gothic = "Yu Gothic UI Semibold";
   fill(darkpurpleInk); // ink bloop blloopp
   color GrayInk = #DBD9D9;
   color RedoInk = GrayInk;
-  textFont(TFont, FSize0);
-  text(title, txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+//  textFont(TFont, FSize0);
+float Decrease = 0.55;
+int Whileloop=1;
+for (int A=0; A<2; A++) {
+  textFont(drawFont[A], fontSize[A]);
+  if (textWidth(TXT[A]) > txtDivWidth[A]) {
+    while (txtWidth(TXT[A]) > txtDivWidth[A]) {
+      Whileloop++;
+      fontSize[A] *= Decrease;
+      textFont(drawFont[A], fontSize[A]);
+    }
+  } else {
+    while (textWidth (TXT[A] ) < txtDivWidth[A]) {
+      WhileLoop++;
+      FSize[A] /= Decrease;
+      textFont(drawFont[A], FSize[A]);
+    }
+  }
+  float PixelChanging = txtDivWidth[A] - textWidth(TXT[A]);
+  while ( PixelChanging < 1) {
+    Whileloop++;
+    FSize[A]--;
+    textFont(drawFont[A], FSize[A]);
+    PixelChanging = txtDivWidth[A]-textWidth(TXT[A]);
+  }
+}
+for (int A=0; A<NumOfDIVS; A++) {
+  textFont(drawFont[A], fontSize[A]);
+  text( TXT[A], txtDivX[A], txtDivY[A], txtDivWidth[A], txtDivHeight[A]);
+}
+fill(RedoInk);
+//  text(title, txtDivX, txtDivY, txtDivWidth, txtDivHeight);
   // Case studies TXT
   /*
    println("DevistoTest Pathway:", "imagePathway1");
@@ -75,9 +109,10 @@ String gothic = "Yu Gothic UI Semibold";
    println("How many attempts it takes till it fits:");
    println("This image needs to FIT and it DOESNT");
    */
-  // ASPECT RATIO
+/*  // ASPECT RATIO
 float gothicAspectRatio = FSizegothic / txtDivHeight;
 FSize0 = txtDivHeight*gothicAspectRatio;
 println(gothicAspectRatio);
 rect(txtDiv2X, txtDiv2Y, txtDiv2Width, txtDiv2Height);
 rect(txtDiv3X, txtDiv3Y, txtDiv3Width, txtDiv3Height);
+*/
