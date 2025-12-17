@@ -59,10 +59,11 @@ float[] FSize = new float[2];
 
 //
 String gothic = "Yu Gothic UI Semibold";
- TFont = createFont (gothic, FSize0 ); // Custom Font i made-ish
+ 
   //Tools / Create Font / Find Font / Do not press Ok
   println(FSize, gothic, TFont, "hi :D");
-  FSizegothic = 49; // 60.2 is the biggest it can get before it vanishes
+  int gothic0 = 49; // 60.2 is the biggest it can get before it vanishes
+  TXT = createFont (gothic0, Aspectratio ); 
   textAlign (BASELINE, TOP);
   color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
   fill(darkpurpleInk); // ink bloop blloopp
