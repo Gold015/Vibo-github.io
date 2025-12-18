@@ -11,7 +11,7 @@ int NumOfDIVS = 3;
 float[] txtDivHeight = new float[NumOfDIVS];
 float[] txtDivX = new float[NumOfDIVS];
 float[] txtDivY  = new float[NumOfDIVS];
-float[] txtDivWidth = new float [NumOfDIVS];
+float[] txtDivWidth = new float[NumOfDIVS];
 // txtDivHeight[0] = appHeight*2/11;
 txtDivX[0] = appWidth * 1.2;
 txtDivY[0] = appHeight * 2.4;
@@ -59,11 +59,11 @@ float[] FSize = new float[2];
 
 //
 String gothic = "Yu Gothic UI Semibold";
- 
+ float TFont;
   //Tools / Create Font / Find Font / Do not press Ok
   println(FSize, gothic, TFont, "hi :D");
   int gothic0 = 49; // 60.2 is the biggest it can get before it vanishes
-  TXT = createFont (gothic0, Aspectratio ); 
+  TXT = createFont (gothic,Aspectratio); 
   textAlign (BASELINE, TOP);
   color darkpurpleInk = #641CAD ; //ink Grey scale 0-255
   fill(darkpurpleInk); // ink bloop blloopp
@@ -71,25 +71,25 @@ String gothic = "Yu Gothic UI Semibold";
   color RedoInk = GrayInk;
 //  textFont(TFont, FSize0);
 float Decrease = 0.55;
-int Whileloop=1;
+int whileloop=1;
 for (int A=0; A<2; A++) {
   textFont(drawFont[A], fontSize[A]);
   if (textWidth(TXT[A]) > txtDivWidth[A]) {
-    while (txtWidth(TXT[A]) > txtDivWidth[A]) {
-      Whileloop++;
+    while (textWidth(TXT[A]) > txtDivWidth[A]) {
+      whileloop++;
       fontSize[A] *= Decrease;
       textFont(drawFont[A], fontSize[A]);
     }
   } else {
     while (textWidth (TXT[A] ) < txtDivWidth[A]) {
-      WhileLoop++;
+      whileloop++;
       FSize[A] /= Decrease;
       textFont(drawFont[A], FSize[A]);
     }
   }
   float PixelChanging = txtDivWidth[A] - textWidth(TXT[A]);
   while ( PixelChanging < 1) {
-    Whileloop++;
+    whileloop++;
     FSize[A]--;
     textFont(drawFont[A], FSize[A]);
     PixelChanging = txtDivWidth[A]-textWidth(TXT[A]);

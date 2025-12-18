@@ -3,45 +3,53 @@
 fullScreen();
 int appWidth = displayWidth;
 int appHeight = displayHeight;
+int imageWidth1 = 338;
+int imageHeight1 = 243;
 // background(#2A0134);
 // ^ Background + App 
 //rect(x, y, width, height);
-/* 
-float LyricsX = appWidth * 2/2;
-float LyricsY = appHeight * 2/2;
-float LyricsWidth = appWidth * 0/0;
-float LyricsHeight = appHeight * 0/0;
-//
-rect(LyricsX, LyricsY, LyricsWidth, LyricsHeight);
-
-//Note: the debuggger expects rectangles to have float or double type variables
+/*
 float imageX = appWidth * 1/4;
 float imageY = appHeight * 1/4;
 float imageWidth = appWidth * 1/2;
 float imageHeight = appHeight * 1/2;
-/
-rect(imageX, imageY, imageWidth, imageHeight);
 */
+//rect(imageX, imageY, imageWidth, imageHeight);
+// Album Image
+String Pathway = "../../../";
+String Location = "Music-Playerworkingnovirustrust-github.io/Images"; //** Ehhhhhhhhhhhhhh  
+String IMGtest = "mybloodyvalentine3";
+String imageExJpg = ".jpg";
+String imagePathway1 = Pathway + Location + IMGtest + imageExJpg; 
+println("Image1 pathway:", imagePathway1);
+PImage image1 = loadImage(imagePathway1);
+//C:\Users\t.glover2\Documents\GitHub\Music-Playerworkingnovirustrust-github.io\Images
+// Album cover 
 float AlbumX = appWidth * 0.05/4.1;
 float AlbumY = appHeight * 0.1/3.9;
 float AlbumWidth = appWidth * 0.5/2;
+// Album Cover img
+size(800, 600);                 // runs like settings()
+//img = loadImage("mybloodyvalentine3.jpg");   // image must be in data folder
+image(image1, 100, 50);               // draw image once
+
 //
 square(AlbumX, AlbumY, AlbumWidth);
-//
-float ScrollX = appWidth * 0.12/4.1;
+// Music scrollbar
+float ScrollX = appWidth * 0.14/4.1;
 float ScrollY = appHeight * 1.85/3.9;
 float ScrollWidth = appWidth * 0.4/2;
 float ScrollHeight = appHeight * 0.28/8;
 //
 rect(ScrollX, ScrollY, ScrollWidth, ScrollHeight); 
-//
+// Song Queue
 size(400, 400);
-rect(10, 800, 220, 220, 28);
-//
-float LyricsX = appWidth * 1.54/4;
-float LyricsY = appHeight * 1/4;
-float LyricsWidth = appWidth * 1/2.7;
-float LyricsHeight = appHeight * 1/2;
+rect(10, 601, 500, 2200, 28);
+// v Lyric box
+float LyricsX = appWidth * 1.2/4;
+float LyricsY = appHeight * 0.04;
+float LyricsWidth = appWidth * 1/1;
+float LyricsHeight = appHeight * 1.4/1.5;
 // buttons v
 rect(LyricsX, LyricsY, LyricsWidth, LyricsHeight);
 //

@@ -5,7 +5,7 @@
 // Display
 
 //fullScreen(); // Canvas
-size(500,0);// Painting changing this allows the Counting attempts code to activate :O)
+size(500,400);// Painting changing this allows the Counting attempts code to activate :O)
 int appWidth = width; // width
 int appHeight = height ;
 int imageWidth1 = 338;
