@@ -10,4 +10,12 @@
   - Processing-Java Libraries must be installed into the IDE
   - Java Libraries simply require the 'import' declaration
 */
+// Sketc
 //Library - Minim
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+//
