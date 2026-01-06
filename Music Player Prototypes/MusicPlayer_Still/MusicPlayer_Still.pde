@@ -18,4 +18,33 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+// GV
+Minim minim; // entire class
+int NumOfSongs = 1; // Best practice
+int NumOfSFX = 2; // Best practice
+AudioPlayer[] MusicList = new AudioPlayer[NumOfSongs];
+AudioPlayer[] SFXS = new AudioPlayer[NumOfSFX];
+int SongPlaying = NumOfSongs - NumOfSongs;
 //
+// Display
+size(500,500);
+//fullScreen();
+int appWidth = width;
+int appHeight = height;
+//
+//Loading in Music 
+minim = new Minim(this);
+String upArrow = "../../";
+String Music = "MusicFolder";
+String normalFolder = "Normal";
+String WhenYouSleep = "When You Sleep";
+String FileExtension_mp3 = ".mp3";
+
+String musicDirectory = upArrow + Music;
+println(musicDirectory);
+
+
+//MusicList[ currentSong ] = minim loadFile( file );
+
+println("did the music and sound load correctly?");
+printArray(MusicList);
