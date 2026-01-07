@@ -16,7 +16,7 @@ float imageHeight = appHeight * 1/2;
 */
 //rect(imageX, imageY, imageWidth, imageHeight);
 // Album Image
-String Pathway = "../../../";
+String Pathway = "../../";
 String Location = "Music-Playerworkingnovirustrust-github.io/Images"; //** Ehhhhhhhhhhhhhh  
 String IMGtest = "mybloodyvalentine3";
 String imageExJpg = ".jpg";

@@ -1,15 +1,6 @@
 /* Library Notes
-  - File / Sketch / Import Library / Manage Libraries
-  - We use Minim for Sound and Sound Effects
-  - Able to Google-search libraries to make your project easier
-  - Documentation: https://code.compartmental.net/minim/
-  - Specific Class: https://code.compartmental.net/minim/audioplayer_class_audioplayer.html
-  - Specific Class: https://code.compartmental.net/minim/audiometadata_class_audiometadata.html
-  
-  ** You are now able to research any Processing-Java Library ... or Any Java Library from the internet **
-  - Processing-Java Libraries must be installed into the IDE
-  - Java Libraries simply require the 'import' declaration
-*/
+ - read code with CTRL T
+ */
 // Sketc
 //Library - Minim
 import ddf.minim.*;
@@ -20,19 +11,12 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 // GV
 Minim minim; // entire class
-int NumOfSongs = 1; // Best practice
+int NumOfSongs = 3; // Best practice
 int NumOfSFX = 2; // Best practice
-AudioPlayer[] MusicList = new AudioPlayer[NumOfSongs];
-AudioPlayer[] SFXS = new AudioPlayer[NumOfSFX];
-int SongPlaying = NumOfSongs - NumOfSongs;
-//
-// Display
-size(500,500);
-//fullScreen();
 int appWidth = width;
 int appHeight = height;
 //
-//Loading in Music 
+void setup() {
 minim = new Minim(this);
 String upArrow = "../../";
 String Music = "MusicFolder";
@@ -40,11 +24,37 @@ String normalFolder = "Normal";
 String WhenYouSleep = "When You Sleep";
 String FileExtension_mp3 = ".mp3";
 
-String musicDirectory = upArrow + Music;
-println(musicDirectory);
+String musicDirect = upArrow + Music + normalFolder;
+String SFXDirect = upArrow + Music + SFXS;
+String file = musicDirect + song1 + fileExtension_mp3;
+MusicList[ SongPlaying ] = minim.loadFile( file );
+file = SFXDirect + SFX1 + fileExtension_mp3;
+SFXS[currentSong] = minim.loadFile( file );
+AudioPlayer[] MusicList = new AudioPlayer[NumOfSongs];
+AudioPlayer[] SFXS = new AudioPlayer[NumOfSFX];
+int SongPlaying = NumOfSongs - NumOfSongs; // Song playing is "CurrentSong"
 
 
-//MusicList[ currentSong ] = minim loadFile( file );
-
-println("did the music and sound load correctly?");
-printArray(MusicList);
+//MusicList[ SongPlaying ] = minim loadFile( file );
+if ( MusicList[SongPlaying]==null | | SFX[SongPlaying==null) {
+  println("did the music and sound load correctly?");
+  printArray(MusicList);
+  printArray(SFXS);
+}
+//
+MusicList[currentSong].play(); 
+//soundEffect[currentSong].play();
+} // End Setup
+//
+void draw() {
+  MusicList[currentSong].play();
+} // End Drawing
+//
+void mousePressed() {
+} // MousePress End
+//
+void keyPressed() {
+}
+//
+// End Main Application
+//
