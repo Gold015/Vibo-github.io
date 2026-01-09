@@ -21,3 +21,5 @@ void setup() {
 
   void keyPressed() {
   }
+  rect(50, 50, appwidth, appHeight);
+  rect(430, 230, appwidth, appHeight);
