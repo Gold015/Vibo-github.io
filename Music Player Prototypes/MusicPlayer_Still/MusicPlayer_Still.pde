@@ -36,15 +36,20 @@ int SongPlaying = NumOfSongs - NumOfSongs; // Song playing is "CurrentSong"
 
 
 //MusicList[ SongPlaying ] = minim loadFile( file );
-if ( MusicList[SongPlaying]==null | | SFX[SongPlaying==null) {
+if (MusicList[SongPlaying] == null || SFX[SongPlaying] == null) {
+  // your code here
+}
   println("did the music and sound load correctly?");
   printArray(MusicList);
   printArray(SFXS);
 }
+
 //
-MusicList[currentSong].play(); 
-//soundEffect[currentSong].play();
-} // End Setup
+if (MusicList[currentSong] != null) {
+  MusicList[currentSong].play();
+}
+ //soundEffect[currentSong].play();
+ // End Setup
 //
 void draw() {
   MusicList[currentSong].play();
