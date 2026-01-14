@@ -1,3 +1,4 @@
+// Global Vars
 int appWidth = displayWidth;
 int appHeight = displayHeight;
 float PlayX = appWidth * 1.19/3;
@@ -5,6 +6,7 @@ float PlayY = appHeight * 1.90/7;
 float PlayWidth = appWidth * 0.4/8.9;
 float PlayHeight = appHeight * 0.4/5.98;
 Boolean playMbutton = true;
+//
 void setup() {
   //  fullScreen();
   size(900, 900);
