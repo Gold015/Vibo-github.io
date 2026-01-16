@@ -1,6 +1,6 @@
 //Global Vars
 int appWidth, appHeight;
-float ExitX, ExitY, ExitWidth, ExitHeight;
+float quitX, quitY, quitWidth, quitHeight;
 float playX, playY, playWidth, playHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
@@ -8,7 +8,7 @@ Boolean playButton=false, quitButton=false;
 //
 color ResetBG, RedoINK, ResetBGDAY, RedoINKday, ResetBGnight, RedoINKnight;
 color quitButtonInk;
-color playColourBackground, playColourSymbol, PlayColBGActive, playColourSymbolActivated;
+color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
 color quitBackground, quitBackgroundActivated;
 Boolean NightTime=false;
 //
@@ -20,10 +20,10 @@ void setup() {
   appHeight = height;
   //
   //Population
-  ExitX = appWidth * -0.2/10;
-  ExitY = appHeight * -0.2/10;
-  ExitWidth = appWidth * 1.1/10;
-  ExitHeight = appHeight * 1.1/10;
+  quitX = appWidth * -0.2/10;
+  quitY = appHeight * -0.2/10;
+  quitWidth = appWidth * 1.1/10;
+  quitHeight = appHeight * 1.1/10;
   playX = appWidth * 4/10;
   playY = appHeight * 4.5/10;
   playWidth = appWidth * 3/10;
@@ -36,21 +36,22 @@ void setup() {
   playSymbolY3 = playY + playHeight * 3/4;
   //
   //DIVs
-  rect(ExitX, ExitY, ExitWidth, ExitHeight);
+  rect(quitX, quitY, quitWidth, quitHeight);
   rect(playX, playY, playWidth, playHeight);
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-  //Colours
-} //End Night Mode Colors
-//
-//End setup
+  //Colours 
+
+  } //End Night Mode Colors
+  //
+ //End setup
 //
 void draw() {
-  // println ("Mouse X:", mouseX, "Mouse Y:", mouseY);
-  //Button X and Y hovers
+  //println ("My Mouse is", mouseX, mouseY);
+  //Button HoverOver
   if ( mouseX>playX && mouseX<playX+playWidth && mouseY>playY && mouseY<playY+playHeight ) {
     //println("Wahoo! I'm playing you");
     playButton = true;
-    fill(PlayColBGActive);
+    fill(playColourBackgroundActivated);
     rect(playX, playY, playWidth, playHeight);
     fill(playColourSymbolActivated);
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
@@ -64,19 +65,29 @@ void draw() {
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
     fill(ResetBG);
   }//End Play Button Hover Over
-}//End Quit Button Hover Over
-//
-if (mouseX>PlayX && mouseX<playX+playWidth && mouseY>playY && mouseY<playY+playHeight) {
-  if (playButton == false) playButtonActive();
-} else {
-  (playbutton == true);
-  PlayButtonActive();
-}
-//End draw
+  if ( mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY &&mouseY<quitY+quitHeight ) {
+    fill(quitBackgroundActivated);
+    rect(quitX, quitY, quitWidth, quitHeight);
+    fill(ResetBG);
+    fill(quitButtonInk);
+    //Note: rect() starts top-right corner, text() starts bottom-right corner
+    text("Exit", quitX+quitWidth*1/2, quitY+quitHeight*3/5); //adjust fractions or decimals until working
+    fill(RedoINK);
+  } else {
+    fill(quitBackground);
+    rect(quitX, quitY, quitWidth, quitHeight);
+    fill(ResetBG);
+    fill(quitButtonInk);
+    //Note: rect() starts top-right corner, text() starts bottom-right corner
+    text("Exit", quitX+quitWidth*1/2, quitY+quitHeight*3/5); //adjust fractions or decimals until working
+    fill(RedoINK);
+  }//End Quit Button Hover Over
+  //
+} //End draw
 //
 void mousePressed() {
   //Quit Button: does not use Boolean, only mouseX&Y already present in system key variables
-  if ( mouseX>ExitX && mouseX<ExitX+ExitWidth && mouseY>ExitY &&mouseY<ExitY+ExitHeight ) {
+  if ( mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY &&mouseY<quitY+quitHeight ) {
     noLoop(); //Adjusts the exit of the program using finishing draw()
     println("buh bye! :D");
     exit(); //With noLoop(), exit happens here
@@ -85,8 +96,7 @@ void mousePressed() {
   //Music Play Functions
   if ( playButton == true ) {
     println("Play My Game. - 2011x");
-    playButton=false;
-    playButton+ true;//reset Boolean for draw()
+    playButton=false; //reset Boolean for draw()
   } else {
     println(".");
   }
@@ -95,28 +105,7 @@ void mousePressed() {
 void keyPressed() {
   if (key=='E' || key=='e') {
     exit();
-    quitButton(); 
-    if (key=='N'|| key=='n'){
-      colorPopulation();
   }
 } //End Key Pressed
 //
 //End MAIN Program
-/*
-f ( mouseX>ExitX && mouseX<ExitX+ExitWidth && mouseY>ExitY &&mouseY<ExitY+ExitHeight ) {
- fill(quitBackgroundActivated);
- rect(ExitX, ExitY, ExitWidth, ExitHeight);
- fill(ResetBG);
- fill(quitButtonInk);
- //Note: rect() starts top-right corner, text() starts bottom-right corner
- text("Exit", ExitX+ExitWidth*1/2, ExitY+ExitHeight*3/5); //adjust fractions or decimals until working
- fill(RedoINK);
- } else {
- fill(quitBackground);
- rect(ExitX, ExitY, ExitWidth, ExitHeight);
- fill(ResetBG);
- fill(quitButtonInk);
- //Note: rect() starts top-right corner, text() starts bottom-right corner
- text("Exit", ExitX+ExitWidth*1/2, ExitY+ExitHeight*3/5); //adjust fractions or decimals until working
- fill(RedoINK);
- */

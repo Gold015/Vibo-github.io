@@ -1,5 +1,5 @@
 void colourPopulations() {
-  NightTimeVars]();
+  NightTimeVars();
   MakingColours();
 }
 
@@ -36,7 +36,7 @@ void MakingColours() {
     RedoINK = RedoINKnight;
     playColourBackground = NightTimeColorDarkPurple;
     playColourSymbol = NightTimeColorPinkish;
-    PlayColBGActive = NightTimeColorPinkish;
+    playColourBackgroundActivated = NightTimeColorPinkish;
     playColourSymbolActivated = NightTimeColorDarkPurple;
     quitBackground = NightTimeColorPinkish;
     quitBackgroundActivated = ExitPurple;
@@ -48,7 +48,7 @@ void MakingColours() {
     RedoINK = black;
     playColourBackground = purple;
     playColourSymbol = DarkerPurple;
-    PlayColBGActive = DarkerPurple;
+    playColourBackgroundActivated = DarkerPurple;
     playColourSymbolActivated = purple;
     quitBackground = white;
     quitBackgroundActivated = ExitPurple;
