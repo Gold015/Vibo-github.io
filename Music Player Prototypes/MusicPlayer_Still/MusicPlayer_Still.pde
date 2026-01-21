@@ -17,28 +17,28 @@ int appWidth = width;
 int appHeight = height;
 //
 void setup() {
-minim = new Minim(this);
-String upArrow = "../../";
-String Music = "MusicFolder";
-String normalFolder = "Normal";
-String WhenYouSleep = "When You Sleep";
-String FileExtension_mp3 = ".mp3";
+  minim = new Minim(this);
+  String upArrow = "../../";
+  String Music = "MusicFolder";
+  String normalFolder = "Normal";
+  String WhenYouSleep = "When You Sleep";
+  String FileExtension_mp3 = ".mp3";
 
-String musicDirect = upArrow + Music + normalFolder;
-String SFXDirect = upArrow + Music + SFXS;
-String file = musicDirect + song1 + fileExtension_mp3;
-MusicList[ SongPlaying ] = minim.loadFile( file );
-file = SFXDirect + SFX1 + fileExtension_mp3;
-SFXS[currentSong] = minim.loadFile( file );
-AudioPlayer[] MusicList = new AudioPlayer[NumOfSongs];
-AudioPlayer[] SFXS = new AudioPlayer[NumOfSFX];
-int SongPlaying = NumOfSongs - NumOfSongs; // Song playing is "CurrentSong"
+  String musicDirect = upArrow + Music + normalFolder;
+  String SFXDirect = upArrow + Music + SFXS;
+  String file = musicDirect + song1 + fileExtension_mp3;
+  MusicList[ SongPlaying ] = minim.loadFile( file );
+  file = SFXDirect + SFX1 + fileExtension_mp3;
+  SFXS[currentSong] = minim.loadFile( file );
+  AudioPlayer[] MusicList = new AudioPlayer[NumOfSongs];
+  AudioPlayer[] SFXS = new AudioPlayer[NumOfSFX];
+  int SongPlaying = NumOfSongs - NumOfSongs; // Song playing is "CurrentSong"
 
 
-//MusicList[ SongPlaying ] = minim loadFile( file );
-if (MusicList[SongPlaying] == null || SFX[SongPlaying] == null) {
-  // your code here
-}
+  //MusicList[ SongPlaying ] = minim loadFile( file );
+  if (MusicList[SongPlaying] == null || SFX[SongPlaying] == null) {
+    // your code here
+  }
   println("did the music and sound load correctly?");
   printArray(MusicList);
   printArray(SFXS);
@@ -48,8 +48,8 @@ if (MusicList[SongPlaying] == null || SFX[SongPlaying] == null) {
 if (MusicList[currentSong] != null) {
   MusicList[currentSong].play();
 }
- //soundEffect[currentSong].play();
- // End Setup
+//soundEffect[currentSong].play();
+// End Setup
 //
 void draw() {
   MusicList[currentSong].play();

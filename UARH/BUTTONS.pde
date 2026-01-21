@@ -7,10 +7,11 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
-int appWidth, appHeight;
+//appWidth, appHeight;
 float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
+rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
 //
 Boolean playButton=false, quitButton=false;
 //
@@ -41,6 +42,7 @@ void setup() {
   musicButtonShapes();
   nightMode=false; //initialization in setup() only
   colourPopulation();
+  textSetup();
   //
 } //End setup
 //

@@ -21,6 +21,11 @@ void divPopulation() {
   playSymbolY3 = playDivY + playDivHeight * 3/4;
 } //End DIV Population
 //
+stringDivX = appWidth*70/279;
+stringDivY = appHeight*22/216;
+stringDivWidth = appWidth*140/279;
+stringDivHeight = appHeight*22/216;
+//
 void colourPopulation() {
   color black = 0; //Gray Scale, much smaller color, 256 bits
   color white = 255; //Gray Scale

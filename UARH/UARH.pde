@@ -1,3 +1,11 @@
+import at.mukprojects.console.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 /* Buttons
  - quitButton
  - DIVs
@@ -14,6 +22,7 @@ void quitButton() {
 void DIVs() {
   endDivs();
   PlayDivs();
+  titleD();
 } //End DIVs
 
 void endDivs() {
@@ -24,13 +33,14 @@ void PlayDivs() {
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
 } // end play
 void playbuttonsymbol() {
-    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-
+  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+}
+void titleD() {
+  rect(txtDivX[A], txtDivY[A], txtDivWidth[A], txtDivHeight[A]);
 }
 
-
 void musicButtonShapes() {
- playbuttonsymbol();
+  playbuttonsymbol();
 } // End Msuic Button Shapes
 //
 void quitButtonActive() {
@@ -57,7 +67,7 @@ void playButtonActive() {
   fill(playColourBackgroundActivated);
   PlayDivs();
   fill(playColourSymbolActivated);
-   playbuttonsymbol();
+  playbuttonsymbol();
   fill(resetBackground);
 } // End Play Button Active
 //
@@ -65,7 +75,7 @@ void playButtonReady() {
   fill(playColourBackground);
   PlayDivs();
   fill(playColourSymbol);
-   playbuttonsymbol();
+  playbuttonsymbol();
   fill(resetBackground);
 } // End Play Button Ready
 //
