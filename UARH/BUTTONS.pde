@@ -11,7 +11,7 @@ import ddf.minim.ugens.*;
 float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
-rect(txtDivX, txtDivY, txtDivWidth, txtDivHeight);
+
 //
 Boolean playButton=false, quitButton=false;
 //
@@ -43,6 +43,7 @@ void setup() {
   nightMode=false; //initialization in setup() only
   colourPopulation();
   textSetup();
+  textMetaData();
   //
 } //End setup
 //

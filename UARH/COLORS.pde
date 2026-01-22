@@ -4,6 +4,7 @@
  - TBA
  */
 //
+color resetBlackink, resetWhiteink, purpleINK;
 void divPopulation() {
   quitDivX = appWidth * 9/10;
   quitDivY = appHeight * 0/10;
@@ -67,6 +68,10 @@ void colourPopulation() {
     quitBackgroundActivated = red;
     quitButtonInk = black;
   } //End Night Mode Colors
+  // blauck unk
+  resetBlackink = black;
+  resetWhiteink = white;
+  purpleINK = #914EBC;
 } //End Colour Population
 //
 // End Subprogram Population
